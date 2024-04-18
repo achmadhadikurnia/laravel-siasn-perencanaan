@@ -14,10 +14,12 @@ class PerencanaanServiceProvider extends PackageServiceProvider
             ->hasConfigFile()
             ->hasMigrations([
                 '2024_01_01_000001_create_siasn_perencanaan_rincian_formasi_table',
+                '2024_01_01_000002_create_siasn_perencanaan_formasi_k2_table',
             ])
             ->runsMigrations()
             ->hasCommands([
                 Commands\ImportRincianFormasiCommand::class,
+                Commands\ImportFormasiK2Command::class,
             ])
             ->hasInstallCommand(function ($command) {
                 $command
